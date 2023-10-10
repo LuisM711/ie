@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Valor Presente Neto (V.P.N)</h1>
+        <img src="formulaVpn.jpg" class="formula" alt="">
+        <p class="text-center">
+            II = Inversión inicial<br>
+            n = Número de flujos<br>
+            t = Número de flujos totales<br>
+            FE = Flujo de efectivo en cuestión<br>
+            i = Tasa de interés<br>
+        </p>
+        <h2 class="text-center">Calculadora del V.P.N</h2>
+        <div id="formulario" class="text-center mt-4">
+            <div class="form-group">
+                <label for="tbIi">Inversión Inicial:</label>
+                <input type="text" class="form-control" id="tbIi" onclick="this.select();">
+            </div>
+            <div id="flujos">
+                <!-- Aquí se agregarán los campos para los flujos de efectivo -->
+            </div>
+            <label for="tbInteres">Tasa de interés:</label>
+            <input type="text" class="form-control" id="tbInteres" onclick="this.select();">
+            <div class="form-group mt-3">
+                <button class="btn btn-primary" onclick="agregar()">Agregar Flujo</button>
+                <button class="btn btn-danger" onclick="quitar()">Quitar Flujo</button>
+                <button class="btn btn-success" onclick="calcular();">Calcular</button>
+            </div>
+        </div>
+
+        <div id="solucion">
+            <div id="divParrafo">
+                <p id="parrafoSolucion"></p>
+            </div>
+
+            <div id="alertaFinal" role="alert">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="vpn.js"></script>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .formula {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+
+
+        #formulario input[type="text"].form-control {
+            width: 90px;
+            display: inline;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        #parrafoSolucion {
+            margin-top: 10px;
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #divParrafo {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</body>
+
+</html>

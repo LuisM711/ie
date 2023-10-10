@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Periodo de Recuperación de Inversión</h1>
+        <img src="formulaPri.jpg" class="formula" alt="">
+        <p class="text-center">
+            a = Año inmediato anterior al que se recupera la inversión <br>
+            b = Inversión inicial <br>
+            c = Flujo de efectivo acumulado de 'a' <br>
+            d = Flujo de efectivo del año en el que se recuperó la inversión
+        </p>
+        <h2 class="text-center">Calculadora del P.R.I</h2>
+        <div id="formulario" class="text-center mt-4">
+            <div class="form-group">
+                <label for="tbIi">Inversión Inicial:</label>
+                <input type="text" class="form-control" id="tbIi" onclick="this.select();">
+            </div>
+            <div id="flujos">
+                <!-- Aquí se agregarán los campos para los flujos de efectivo -->
+            </div>
+            <div class="form-group mt-3">
+                <button class="btn btn-primary" onclick="agregar()">Agregar Flujo</button>
+                <button class="btn btn-danger" onclick="quitar()">Quitar Flujo</button>
+                <button class="btn btn-success" onclick="calcular();">Calcular</button>
+            </div>
+        </div>
+        <div id="solucion">
+            <!-- <div id="tabla"></div> -->
+        </div>
+    </div>
+
+    <script src="pri.js"></script>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .formula {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+
+        #tabla {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        #formulario input[type="text"].form-control {
+            width: 90px;
+            display: inline;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</body>
+
+</html>
