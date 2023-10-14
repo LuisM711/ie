@@ -91,7 +91,7 @@ incrustarParrafo = (problema,resultado) => {
     //Con esto limpio el parrafo del HTML, por si ya tenia texto, para limpiarlo
     parrafoSolucion.innerHTML = "";
     //Aqui creo el string que la libreria analiza para generar la fraccion
-    const string = `V.A.E = \\frac{${problema.vpn} * ${problema.r/100}}{1-\\frac{1}{(1+r)^${problema.n}}}`;
+    const string = `V.A.E = \\frac{${problema.vpn} * ${problema.r/100}}{1-\\frac{1}{(1+${problema.r/100})^${problema.n}}}`;
     const latex = `\\(${string}\\)`;
     //Aqui agrego la fraccion y muestro el resultado de VAE en el siguiente renglon
     parrafoSolucion.innerHTML = latex + `<br><br>\\(V.A.E = ${resultado}\\)`;
