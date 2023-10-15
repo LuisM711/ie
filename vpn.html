@@ -4,12 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script src="vpn.js"></script>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap/bootstrap.min.js"></script>
 
 <body>
+    <!-- Modal de información -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Información sobre el V.P.N</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Aquí puedes agregar la información sobre el P.R.I -->
+                    El Valor Presente Neto, o VPN, es una métrica fundamental en el análisis financiero que se utiliza
+                    para determinar la viabilidad de un proyecto o inversión al calcular el valor actual de los flujos
+                    de efectivo futuros descontados a una tasa de interés adecuada. El VPN refleja si una inversión
+                    generará un rendimiento positivo o negativo, y si es mayor que cero, generalmente se considera un
+                    proyecto rentable. Sin embargo, el VPN también tiene su punto débil, ya que no tiene en cuenta la
+                    inflación. Esto significa que no considera cómo la inflación puede afectar el poder adquisitivo del
+                    dinero en el tiempo, lo que puede llevar a una evaluación inexacta de la rentabilidad real de la
+                    inversión en términos ajustados por inflación. Por lo tanto, al utilizar el VPN, es crucial tener en
+                    cuenta el efecto de la inflación y complementar el análisis con otras métricas para obtener una
+                    imagen financiera completa y precisa.
+                    <!-- Agrega más información si es necesario -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto menuNav">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="pri.html">Periodo de Recuperación de la Inversión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="vpn.html">Valor Presente Neto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="vae.html">Valor Anual Equivalente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="tir.html">Tasa Interna de Retorno</a>
+                    </li>
+                    <li class="nav-item"> <!-- Elemento central -->
+                        <a class="btn btn-primary" href="index.html">Volver a inicio</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container mt-5">
         <h1 class="text-center">Valor Presente Neto (V.P.N)</h1>
         <img src="formulaVpn.jpg" class="formula" alt="">
@@ -20,6 +82,9 @@
             FE = Flujo de efectivo en cuestión<br>
             i = Tasa de interés<br>
         </p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+            Mostrar info <i class="bi bi-info-circle"></i>
+        </button>
         <h2 class="text-center">Calculadora del V.P.N</h2>
         <div id="formulario" class="text-center mt-4">
             <div class="form-group">
@@ -49,7 +114,7 @@
         </div>
     </div>
 
-    
+
     </head>
     <style>
         .formula {
@@ -78,6 +143,12 @@
             width: 100%;
             max-width: 100%;
             overflow-x: auto;
+        }
+        .container {
+            text-align: center;
+        }
+        .menuNav>li {
+            margin: 0 5px;
         }
     </style>
 </body>

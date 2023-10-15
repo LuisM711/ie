@@ -2,7 +2,7 @@ let numeroDeFlujos = 0;
 onload = (event) => {
     //Aqui basicamente agrego que van a ser 5 flujos inicialmente
     //Y les asigno valores para que no carguen los campos vacios y testear rapido
-    crearFe();
+    agregar();
     agregar();
     agregar();
     agregar();
@@ -15,17 +15,7 @@ onload = (event) => {
     flujo5.value = "8";
     tbInteres.value = "6";
 }
-crearFe = () => {
-    //Esta es la logica que implemente para agregar un flujo de efectivo inicial
-    numeroDeFlujos++;
-    for (let i = 1; i <= numeroDeFlujos; i++) {
-        const flujo = document.createElement("div");
-        flujo.innerHTML = `Flujo ${i}: <input type = "text" id = "flujo${i}" onclick = "this.select();" class = "form-control">`;
-        flujos.append(flujo);
-    }
-}
 agregar = () => {
-    //Esto es lo mismo que arriba, solo que con un poco de redundancia para no batallar, pero este agrega campos ya que existe minimo un flujo
     numeroDeFlujos++;
     const flujo = document.createElement("div");
     flujo.innerHTML = `Flujo ${numeroDeFlujos}: <input type = "text" id = "flujo${numeroDeFlujos}" onclick = "this.select();" class = "form-control">`;

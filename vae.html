@@ -4,12 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="vae.js"></script>
 
 <body>
+    <!-- Modal de información -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Información sobre el V.A.E</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Aquí puedes agregar la información sobre el P.R.I -->
+                    El Valor Anual Equivalente, o VAE, es una métrica esencial en el análisis financiero que se emplea
+                    para determinar el valor anual de los flujos de efectivo de un proyecto o inversión a lo largo de su
+                    vida útil. El VAE permite comparar proyectos con diferentes duraciones y estructuras de flujo de
+                    efectivo al expresar todos los flujos de efectivo en términos de un valor anual constante. Sin
+                    embargo, el VAE también presenta una limitación importante, ya que no considera el impacto de la
+                    inflación. Esto significa que no tiene en cuenta cómo la inflación puede erosionar el valor real de
+                    los flujos de efectivo en el tiempo, lo que puede llevar a una evaluación sesgada de la verdadera
+                    rentabilidad de la inversión. Por lo tanto, al utilizar el VAE, es esencial ser consciente de la
+                    inflación y complementar el análisis con otras métricas que tengan en cuenta este factor para
+                    obtener una evaluación financiera más precisa y completa.
+                    <!-- Agrega más información si es necesario -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto menuNav">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="pri.html">Periodo de Recuperación de la Inversión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="vpn.html">Valor Presente Neto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="vae.html">Valor Anual Equivalente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="tir.html">Tasa Interna de Retorno</a>
+                    </li>
+                    <li class="nav-item"> <!-- Elemento central -->
+                        <a class="btn btn-primary" href="index.html">Volver a inicio</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container mt-5">
         <h1 class="text-center">Valor Anual Equivalente(V.A.E)</h1>
         <img src="formulaVae.jpg" class="formula" alt="">
@@ -18,6 +80,9 @@
             r = Tasa de interés<br>
             n = Número de periodos<br>
         </p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+            Mostrar info <i class="bi bi-info-circle"></i>
+        </button>
         <h2 class="text-center">Calculadora del V.A.E</h2>
         <div id="formulario" class="text-center mt-4">
             <div class="form-group">
@@ -77,6 +142,12 @@
             width: 100%;
             max-width: 100%;
             overflow-x: auto;
+        }
+        .menuNav>li {
+            margin: 0 5px;
+        }
+        .container {
+            text-align: center;
         }
     </style>
 </body>

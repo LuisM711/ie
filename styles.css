@@ -1,14 +1,16 @@
-#frame>iframe {
-    min-height: 80vh;
-    width: 100%;
-}
+.formula-img {
+    max-width: 280px;
+    display: block;
+    margin: 0 auto;
+  }
 
-#frame {
-    display: flex;
-    justify-content: center;
-
-}
+  .card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombreado */
+    cursor: pointer;
+  }
 
 body>.container {
-    min-height: 100vh;
+    height: auto;
+    min-height: 75vh;
 }
