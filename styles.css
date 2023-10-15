@@ -1,16 +1,24 @@
 .formula-img {
-    max-width: 280px;
-    display: block;
-    margin: 0 auto;
-  }
+  max-width: 280px;
+  display: block;
+  margin: 0 auto;
+}
 
-  .card:hover {
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombreado */
-    cursor: pointer;
-  }
+.card:hover {
+  transform: scale(1.05);
+  /* Aumenta el tamaño al pasar el mouse */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Agrega sombreado */
+  cursor: pointer;
+  z-index: 1;
+}
 
 body>.container {
-    height: auto;
-    min-height: 75vh;
+  height: auto;
+  min-height: 75vh;
+}
+
+a.link{
+  text-decoration: none;
+  color: inherit;
 }
